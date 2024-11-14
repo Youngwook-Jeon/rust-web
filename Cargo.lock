@@ -191,6 +191,7 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "core",
+ "glue",
  "tokio",
 ]
 
@@ -465,6 +466,7 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "dal",
+ "glue",
  "serde",
 ]
 
@@ -500,6 +502,7 @@ dependencies = [
 name = "dal"
 version = "0.1.0"
 dependencies = [
+ "glue",
  "serde",
  "serde_json",
 ]
@@ -632,6 +635,15 @@ name = "gimli"
 version = "0.31.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "07e28edb80900c19c28f1072f2e8aeca7fa06b23cd4169cefe1af5aa3260783f"
+
+[[package]]
+name = "glue"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "serde",
+ "thiserror",
+]
 
 [[package]]
 name = "h2"
@@ -1136,13 +1148,33 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 
 [[package]]
 name = "syn"
-version = "2.0.81"
+version = "2.0.87"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "198514704ca887dd5a1e408c6c6cdcba43672f9b4062e1b24aa34e74e6d7faae"
+checksum = "25aa4ce346d03a6dcd68dd8b4010bcb74e54e62c90c573f394c46eae99aba32d"
 dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
+]
+
+[[package]]
+name = "thiserror"
+version = "2.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c006c85c7651b3cf2ada4584faa36773bd07bac24acfb39f3c431b36d7e667aa"
+dependencies = [
+ "thiserror-impl",
+]
+
+[[package]]
+name = "thiserror-impl"
+version = "2.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f077553d607adc1caf65430528a576c757a71ed73944b66ebb58ef2bbd243568"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
